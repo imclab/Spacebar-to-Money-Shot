@@ -1,16 +1,27 @@
 <!doctype html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin:500,500italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
     <script src="mousetrap.js"></script>
+
     <script>
       // ensure the web page (DOM) has loaded
       document.addEventListener("DOMContentLoaded", function () {
-          Mousetrap.bind('space', function() { example.play(5); });
+          Mousetrap.bind('space', function() {
+            example.play(64);
+            $('.hideMe').fadeOut('fast', function() {
+              $('#moneyshot').fadeIn();
+            });
+          });
 
          var example = Popcorn.smart(
            '#video',
-           'youtube.com/watch?v=1Mx3_MpwFJI' );
+           'youtube.com/watch?v=6R5QueuvKQ4' );
 
          example.play();
 
@@ -18,7 +29,34 @@
     </script>
   </head>
   <body>
-    <div id="video" style="width: 360px; height: 300px;" ></div>
-    <div id="footnotediv"></div>
+    <div class="header">
+      <img src="img/logo.png" />
+      <i>No more waiting, no more unfortunate O-moments...</i>
+      <a href="#" class="btn">Get the Chrome Extension</a>
+      <div class="clear"></div>
+    </div>
+    <div class="container_12">
+      
+      <div class="grid_7">
+        <div id="video"></div>
+        <div id="footnotediv"></div>
+        <div class="instructions">
+          <div class="hideMe">
+            <h2>Try It!</h2>
+            <p>PRESS</p>
+            <img src="img/space.png" />
+          </div>
+          <div id="moneyshot">
+            <h1>Moneyshot!</h1>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr class="soften" />
+      <h2 class="grid_6">ARE YOU A PORN PROVIDER?</h2>
+      <a href="#" class="btn grid_4">Integrate with us ></a>
+      <div class="clear"></div>
+    </div>
+    
   </body>
 </html>
