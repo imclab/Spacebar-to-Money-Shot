@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+    <script src="mousetrap.js"></script>
+    <script>
+      // ensure the web page (DOM) has loaded
+      document.addEventListener("DOMContentLoaded", function () {
+          Mousetrap.bind('space', function() { example.play(5); });
+
+         var example = Popcorn.smart(
+           '#video',
+           'youtube.com/watch?v=1Mx3_MpwFJI' );
+
+         example.play();
+
+      }, false);
+    </script>
+  </head>
+  <body>
+    <div id="video" style="width: 360px; height: 300px;" ></div>
+    <div id="footnotediv"></div>
+  </body>
+</html>
