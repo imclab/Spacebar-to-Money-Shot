@@ -1,3 +1,2 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    
-});
+var e = Popcorn("#watch-video");
+e.currentTime();
