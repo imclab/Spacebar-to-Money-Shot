@@ -26,7 +26,8 @@
     <script>
       // ensure the web page (DOM) has loaded
       document.addEventListener("DOMContentLoaded", function () {
-          Mousetrap.bind('space', function() {
+          Mousetrap.bind('space', function(e) {
+            e.preventDefault();
             example.play(64);
             $('.hideMe').fadeOut('fast', function() {
               $('#moneyshot').fadeIn();
@@ -53,7 +54,7 @@
       
       <div class="grid_7">
         <div id="video"></div>
-        <div id="footnotediv"></div>
+        <div id="footnotediv">All turtles are at least 18 years old.</div>
         <div class="instructions">
           <div class="hideMe">
             <h2>Try It!</h2>
@@ -70,7 +71,7 @@
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
         <form action="http://joysti.us2.list-manage.com/subscribe/post?u=3e3392ea826ef7503b3204b08&amp;id=f4ddea32b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <h2>Subscribe to our mailing list</h2>
+          <h2>Signup to be a Moneyshot Tagger</h2>
         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
         <div class="mc-field-group">
           <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
@@ -93,7 +94,7 @@
 <!--End mc_embed_signup-->
       <hr class="soften" />
       <h2 class="grid_6">ARE YOU A PORN PROVIDER?</h2>
-      <a href="#" class="btn grid_4">Integrate with us ></a>
+      <a href="mailto:contact@spacebartomoneyshot.com" class="btn grid_4">Integrate with us ></a>
       <div class="clear"></div>
     </div>
     <hr class="soften" />
