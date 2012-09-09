@@ -28,9 +28,10 @@
       document.addEventListener("DOMContentLoaded", function () {
           Mousetrap.bind('space', function(e) {
             e.preventDefault();
-            example.play(64);
+            example.unmute().play(61);
             $('.hideMe').fadeOut('fast', function() {
               $('#moneyshot').fadeIn();
+
             });
           });
 
@@ -38,7 +39,11 @@
            '#video',
            'youtube.com/watch?v=6R5QueuvKQ4' );
 
-         example.play();
+         example.load();
+        example.exec( 9, function() {    
+          this.mute();
+        });
+
 
       }, false);
     </script>
