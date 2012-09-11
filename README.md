@@ -5,6 +5,7 @@ Spacebar to Money Shot
 Comedy Hack Day '12. Lord forgive me. 
 <br>
 Won People's Choice, Second Overall, Best Data Hack. 
+Video: http://www.spreecast.com/events/comedy-hack-day-demos-2, at 2h:15m
 <br>
 <br>
 <br>
